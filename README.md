@@ -1,6 +1,6 @@
 # Escola.IO.Api
 Escola-App
-Escola-App: Olá! Tudo bem? Espero que sim!! Vamos lá para rodar o projeto da API. Primeiro, precisamos de duas coisas:
+ Olá! Tudo bem? Espero que sim!! Vamos lá para rodar o projeto da API. Primeiro, precisamos de duas coisas:
 
 1.Por favor, crie essas tabelas em seu banco de dados local:
 

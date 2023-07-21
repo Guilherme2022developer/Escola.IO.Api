@@ -18,7 +18,7 @@ Escola-App
     Nome NVARCHAR(100) NOT NULL,
     IdEscola UNIQUEIDENTIFIER NOT NULL,
     Status BIT NOT NULL DEFAULT 1,
-    FOREIGN KEY (IdEscola) REFERENCES Escolas (Id)
+    FOREIGN KEY ( IdEscola ) REFERENCES Escolas (Id)
 );*
 
 

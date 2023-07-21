@@ -4,22 +4,22 @@ Escola-App
 
 1.Por favor, crie essas tabelas em seu banco de dados local:
 
-
-*CREATE TABLE Escolas (
+```sql
+CREATE TABLE Escolas (
     Id UNIQUEIDENTIFIER PRIMARY KEY,
     Nome NVARCHAR(200) NOT NULL,
     Endereco NVARCHAR(200) NOT NULL,
-);*
+);
 
 
 
-*CREATE TABLE Turmas (
+CREATE TABLE Turmas (
     Id UNIQUEIDENTIFIER PRIMARY KEY,
     Nome NVARCHAR(100) NOT NULL,
     IdEscola UNIQUEIDENTIFIER NOT NULL,
     Status BIT NOT NULL DEFAULT 1,
-    FOREIGN KEY ( IdEscola ) REFERENCES Escolas (Id)
-);*
+    FOREIGN KEY (IdEscola) REFERENCES Escolas (Id)
+);
 
 
 CREATE TABLE Alunos (
@@ -32,7 +32,7 @@ CREATE TABLE Alunos (
     Status BIT NOT NULL DEFAULT 1,
     FOREIGN KEY (TurmaId) REFERENCES Turmas (Id)
 );
-
+```
 
 Segundo ponto, existe um arquivo chamado appsettings.json onde você pode configurar suas ConnectionStrings. Por gentileza, certifique-se de fazer essa configuração corretamente, pois ela é crucial para que o aplicativo compile corretamente.
 

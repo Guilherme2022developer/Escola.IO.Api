@@ -1,0 +1,46 @@
+<app-menu-superior></app-menu-superior>
+<div class="container main-container">
+<div class="row">
+    <div class="col-md-12">
+        <!-- <div class="pull-left">
+            <a class="btn btn-primary" id="novoEvento" [routerLink]="['/eventos/novo']">
+                <span title="Novo Evento" class="glyphicon glyphicon-plus-sign"></span> Novo Evento
+            </a>
+        </div> -->
+    </div>
+</div>
+
+<h3>Alunos</h3>
+<br/>
+<div class="form-group">
+    <div class="col-md-4 col-md-offset-2">
+      <span><a routerLink="/eventos/novo-aluno" class="btn btn-primary">Novo Aluno</a></span>
+    </div>
+  </div>
+
+<br><body>
+    <table>
+        <tr >
+            <th>Nome</th>
+            <th>Documento</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor='let evento of eventos' >
+            <td>{{evento.nome}}</td>
+            <td>{{evento.documento}}</td>
+            <td>
+                <a [routerLink]="['/eventos/aluno/editar', evento.id]" title="Editar" class="btn btn-warning">
+                  <span class="glyphicon glyphicon-pencil"></span> Editar
+                </a>
+              </td>
+              <td>
+                <a [routerLink]="['/eventos/aluno/excluir', evento.id]" title="Apagar" class="btn btn-danger">
+                  <span class="glyphicon glyphicon-trash"></span> Apagar
+                </a>
+              </td>
+        </tr>
+    </table>
+</body>
+</div>
+<br>

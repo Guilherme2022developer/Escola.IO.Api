@@ -1,0 +1,20 @@
+<app-menu-superior>
+    <!-- Conteúdo do menu superior -->
+  </app-menu-superior>
+  
+  <div class="container main-container">
+    <h2>Excluir Turma</h2>
+  
+    <h3>Tem certeza que deseja excluir esta Turma?</h3>
+    <div style="text-align: center; margin: 20px;">
+      <h4>{{ evento.nome }}</h4>
+      <hr />
+      <form novalidate (ngSubmit)="excluirEvento()">
+        <div class="form-actions no-color">
+          <input type="submit" value="Excluir" class="btn btn-danger" />
+          <!-- <a [routerLink]="['/eventos/meus-eventos']" class="btn btn-primary">Voltar para a lista</a> -->
+        </div>
+      </form>
+    </div>
+  </div>
+  

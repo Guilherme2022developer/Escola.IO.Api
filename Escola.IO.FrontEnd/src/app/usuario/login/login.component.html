@@ -1,0 +1,45 @@
+<app-menu-superior></app-menu-superior>
+<div class="container main-container">
+  <h4>Cadastrar Turma</h4>
+  <hr />
+  <form novalidate (ngSubmit)="login()" [formGroup]="loginForm">
+
+    <div class="form-horizontal">
+
+      <div class="alert alert-danger" *ngIf="errors.length > 0">
+        <h3 id="msgRetorno">Opa! Alguma coisa não deu certo:</h3>
+        <ul>
+          <li *ngFor="let error of errors">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error': displayMessage['email'] }">
+        <label class="col-md-2 control-label">Nome</label>
+        <div class="col-md-10">
+          <input class="form-control" id="email" type="text" placeholder="Nome (requerido)" formControlName="email" />
+          <span class="text-danger" *ngIf="displayMessage['email']">
+              <p [innerHTML]="displayMessage['email']"></p>
+        </span>
+        </div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error': displayMessage['senha'] }">
+        <label class="col-md-2 control-label">Escola</label>
+        <div class="col-md-10">
+          <input class="form-control" id="senha" type="text" placeholder="Escola (requerido)" formControlName="senha" />
+          <span class="text-danger" *ngIf="displayMessage['senha'] ">
+              <p [innerHTML]="displayMessage['senha'] "></p>
+        </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-md-offset-2">
+          <span><button class="btn btn-success" id="login" type="submit" [disabled]='!loginForm.valid'>Salvar</button></span>
+          <span><a routerLink="/inscricao" class="btn btn-primary">Ver Turmas</a></span>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

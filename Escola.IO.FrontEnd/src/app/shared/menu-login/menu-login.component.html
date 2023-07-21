@@ -1,0 +1,4 @@
+<ul [ngSwitch]="usuarioLogado()"  class="navbar-nav navbar-right ajuste">
+    <a *ngSwitchCase="false" class="nav-link" [routerLink]="['/eventos/aluno-lista']">Alunos</a>
+    <a *ngSwitchCase="false"  class="nav-link"[routerLink]="['/eventos/turma']">Turmas</a>
+</ul>

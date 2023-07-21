@@ -1,8 +1,8 @@
 # Escola.IO.Api
 Escola-App
-Olá Tudo bem espero que sim!!
-Vamos lá pra poder rodar o projeto da Api primeiro é preciso duas coisas:
-número um crie essas tabelas em seu banco de dados local por favor:
+Escola-App: Olá! Tudo bem? Espero que sim!! Vamos lá para rodar o projeto da API. Primeiro, precisamos de duas coisas:
+
+1.Por favor, crie essas tabelas em seu banco de dados local:
 
 CREATE TABLE Escolas (
     Id UNIQUEIDENTIFIER PRIMARY KEY,
@@ -29,17 +29,27 @@ CREATE TABLE Alunos (
     FOREIGN KEY (TurmaId) REFERENCES Turmas (Id)
 );
 
-Segundo ponto existe um arquivo que se chama appsettings.json lá você configura sua ConnectionStrings por gentileza e assim ele vai compilar.
+Segundo ponto, existe um arquivo chamado appsettings.json onde você pode configurar suas ConnectionStrings. Por gentileza, certifique-se de fazer essa configuração corretamente, pois ela é crucial para que o aplicativo compile corretamente.
 
 
 
-Agora vamos para o frontEnd eu fiz ele em angular pra rodar ele você precisa seguir alguns passos simples:
+Agora, vamos para o FrontEnd! Eu desenvolvi o FrontEnd utilizando Angular. Para rodá-lo, você precisa seguir alguns passos simples:
+
 Pré-requisitos:
 Certifique-se de ter as seguintes ferramentas instaladas em seu computador:
 
-Node.js: O Angular requer o Node.js para executar. Verifique se você tem o Node.js instalado usando o comando node -v no terminal.
-Angular CLI: O Angular CLI (Command Line Interface) é uma ferramenta que simplifica o desenvolvimento Angular. Instale-o globalmente usando o comando npm install -g @angular/cli
+1.Node.js: O Angular requer o Node.js para executar. Verifique se você tem o Node.js instalado usando o comando node -v no terminal.
 
-depois disso execute esse comando no terminal na raiz do projeto "npm install" vai instalar todos os pacotes, depois de finalizar, execute o ng serve
-com api rodando e front também vai funcionar tudo, a api está documentada sobre cada endpoints qualquer dúvida só me chamar angular e meio chatinho de rodar rsrs 
-valeu...........
+2.Angular CLI: O Angular CLI (Command Line Interface) é uma ferramenta que simplifica o desenvolvimento Angular. Instale-o globalmente usando o comando npm install -g @angular/cli.
+
+Após instalar as ferramentas necessárias, siga os passos abaixo:
+
+1.Abra o terminal na raiz do projeto.
+
+2.Execute o comando npm install. Isso irá instalar todas as dependências necessárias para o projeto.
+
+3.Após a conclusão da instalação, execute o comando ng serve para iniciar o servidor de desenvolvimento do Angular.
+
+Certifique-se de que a API também esteja rodando em paralelo para que o FrontEnd funcione corretamente. A documentação da API contém informações sobre cada endpoint, caso tenha dúvidas.
+
+Se surgir qualquer dúvida durante o processo de execução do Angular, estou à disposição para ajudar, Valeuu.

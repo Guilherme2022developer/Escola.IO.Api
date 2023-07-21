@@ -5,21 +5,21 @@ Escola-App
 1.Por favor, crie essas tabelas em seu banco de dados local:
 
 
-CREATE TABLE Escolas (
+*CREATE TABLE Escolas (
     Id UNIQUEIDENTIFIER PRIMARY KEY,
     Nome NVARCHAR(200) NOT NULL,
     Endereco NVARCHAR(200) NOT NULL,
-);
+);*
 
 
 
-CREATE TABLE Turmas (
+*CREATE TABLE Turmas (
     Id UNIQUEIDENTIFIER PRIMARY KEY,
     Nome NVARCHAR(100) NOT NULL,
     IdEscola UNIQUEIDENTIFIER NOT NULL,
     Status BIT NOT NULL DEFAULT 1,
     FOREIGN KEY (IdEscola) REFERENCES Escolas (Id)
-);
+);*
 
 
 CREATE TABLE Alunos (

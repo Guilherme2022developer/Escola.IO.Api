@@ -88,7 +88,7 @@ export class AdicionarAlunoComponent  implements OnInit, AfterViewInit{
       
       this.eventoService.registrarEventoAluno(p).subscribe(
         result => {this.onSalveComplete(result)},
-        fail => {this.onError(fail)}
+        errors => {this.onError(errors)}
       );
     }
   }
@@ -119,7 +119,7 @@ export class AdicionarAlunoComponent  implements OnInit, AfterViewInit{
       closeOnClick: true,
       pauseOnHover: true,
     });
-    this.errors = fail.errors;
+    this.errors = fail.error.errors.$values;
 
   }
 

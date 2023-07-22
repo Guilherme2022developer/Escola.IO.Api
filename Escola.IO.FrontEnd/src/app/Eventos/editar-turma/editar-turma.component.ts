@@ -139,7 +139,7 @@ export class EditarTurmaComponent  implements OnInit, AfterViewInit {
       closeOnClick: true,
       pauseOnHover: true,
     });
-    this.errors = fail.error.errors;
+    this.errors = fail.error.errors.$values;
   }
 
   public showModal(): void {

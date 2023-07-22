@@ -18,7 +18,7 @@ export class ExcluirEventoComponent implements OnInit {
   public sub: Subscription;
   public eventoId: string = "";
   public evento: Escola;
- 
+  public errors: any[] = [];
 
   constructor(private eventoService: EventoService,
     private route: ActivatedRoute,
@@ -70,6 +70,6 @@ export class ExcluirEventoComponent implements OnInit {
       closeOnClick: true,
       pauseOnHover: true,
     });
-
+    this.errors = fail.error.errors.$values;
   }
 }

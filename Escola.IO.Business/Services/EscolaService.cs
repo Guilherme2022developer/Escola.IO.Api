@@ -37,7 +37,7 @@ namespace Escola.IO.Business.Services
 
             if (escola.Turmas.Any())
             {
-                Notificar("Essa Escola possui turmas remover alunos primeiro.");
+                Notificar("Essa Escola possui turmas remover turmas primeiro.");
                 return false;
             }
 

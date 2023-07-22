@@ -113,7 +113,7 @@ export class AdicionarTurmaComponent implements OnInit, AfterViewInit {
       closeOnClick: true,
       pauseOnHover: true,
     });
-    this.errors = fail.error.errors;
+    this.errors = fail.error.errors.$values;
 
   }
 }

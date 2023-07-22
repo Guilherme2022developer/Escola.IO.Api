@@ -27,12 +27,14 @@
       </div>
       <div class="form-group" [ngClass]="{'has-error': displayMessage['turmaId'] }">
         <label class="col-md-2 control-label">Turma</label>
+        <p *ngIf="categorias.length < 0">Não há turmas cadastradas Por favor, cadastre uma Turma para prosseguir em Turmas > Nova turma. </p>
         <div class="col-md-10">
           <select class="form-control" formControlName="turmaId" id="turmaId">
           <option *ngFor="let categoria of categorias" value="{{categoria.id}}" >{{ categoria.nome }}</option>
        </select>
           <span class="text-danger" *ngIf="displayMessage['turmaId']">
               <p [innerHTML]="displayMessage['turmaId']"></p>
+              
         </span>
         </div>
       </div>

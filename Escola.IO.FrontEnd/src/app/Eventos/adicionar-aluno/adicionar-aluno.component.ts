@@ -24,6 +24,7 @@ export class AdicionarAlunoComponent  implements OnInit, AfterViewInit{
   public categorias: Turma[];
   public gratuito: Boolean;
   public online: Boolean;
+  public TemTurma: Boolean = true;
 
 
   constructor(private fb: FormBuilder, private router: Router, private snotifireService: SnotifireService, private eventoService : EventoService) {
